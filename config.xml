@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.intel.sample"
+        versioncode = "1"
+        version   = "0.0.1">
+    <name>Media Sample</name>
+    <icon src="icon.png"/>
+    <content src="index.html"/>
+    <description>
+      A HTML5 Sample for using Phonegap media.
+    </description>
+    <author href="http://software.intel.com/html5">
+        Intel Corporation
+    </author>
+        
+    <preference name="phonegap-version" value="2.0.0" />
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>      
+
+    <!-- for Android -->
+    <preference name="android-minSdkVersion" value="9" />
+</widget>

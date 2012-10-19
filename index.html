@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+
+    <!--
+     * Copyright (c) 2012, Intel Corporation
+     * File revision: 04 October 2012
+     * Please see http://software.intel.com/html5/license/samples 
+     * and the included README.md file for license terms and conditions.
+     -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>Using PhoneGap Audio Media</title>
+
+	  <link rel="stylesheet" href="css/master.css" type="text/css" media="screen" title="no title" charset="utf-8"></link>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/deviceCheck.js"></script>
+      <script type="text/javascript" src="js/mediaHandlers.js"></script>
+      <script type="text/javascript" >
+          document.addEventListener("deviceready", onDeviceReady, false);
+
+          function onDeviceReady() {
+              document.getElementById("PhonegapVerID").innerHTML += window.device.cordova;
+              console.log("onDeviceReady: " + document.getElementById("PhonegapVerID").innerHTML);
+
+              console.log("*** phoneCheck.android: " + phoneCheck.android);
+              console.log("*** phoneCheck.ios: " + phoneCheck.ios);
+
+              // set initial button state
+              setButtonState(myMediaState.start);
+
+              // check if an existing media file already exist and reset button state
+              checkMediaRecFileExist();
+          }
+
+      </script>
+  </head>
+  <body>
+    <div id="container">
+       <div id="header">Media Sample v1.0</div>
+       <div id="body">
+           <div class="subheader" id="PhonegapVerID">Record with PhoneGap version: </div><br />
+           <div style="padding-left:15pt">
+               <button class="button_round" ID="startRecID" onclick="startRecording()">Record</button>
+               <button class="button_round" ID="stopRecID" onclick="stopRecording()">Stop</button>
+
+               <div id="RecStatusID">Status: </div>
+               <div id="media_rec_pos">Audio position: 0 sec</div>
+           </div><br />
+           <div class="subheader" id="PhonegapVerID">Playback Using PhoneGap</div><br />
+           <div style="padding-left:15pt">
+               <button class="button_round" ID="startPlayID" onclick="playMusic()">Play</button>
+               <button class="button_round" ID="pausePlayID" onclick="pauseMusic()">Pause</button>
+               <button class="button_round" ID="stopPlayID" onclick="stopMusic()">Stop</button>
+
+               <div id="PlayStatusID">Status: </div>
+               <div id="media_pos">Audio position: 0 sec</div>
+           </div>
+
+       </div>
+       <div id="footer"></div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,56 @@
+/*
+ * Copyright (c) 2012, Intel Corporation
+ * File revision: 04 October 2012
+ * Please see http://software.intel.com/html5/license/samples 
+ * and the included README.md file for license terms and conditions.
+ */
+
+html,  
+body 
+{
+    background:Azure none repeat scroll 0 0;
+    color:black;
+    /*background: Azure  ;*/
+    height:100%;
+    font-family:Helvetica, Verdana, Geneva, sans-serif;
+    margin:0;
+    border-top:1px solid #393939;
+}
+
+#container {
+   min-height:100%;
+   position:relative;
+}
+#header {
+   background:DodgerBlue ;
+   padding:10px;
+   text-align:center; 
+   color:White;
+}
+#body {
+   padding:10px;
+   padding-bottom:30px;   /* Height of the footer */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   font-size:10pt;
+   text-align:center; 
+   width:100%;
+   height:30px;   /* Height of the footer */
+   background:DodgerBlue ;
+   color:White;
+}
+.button_round {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background-color:BurlyWood;
+    text-align:center; 
+}
+
+.subheader {
+   font-weight:bold;
+   background-color: Gray;
+   color: White;
+}
